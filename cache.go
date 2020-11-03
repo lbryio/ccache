@@ -59,6 +59,10 @@ func (c *Cache) ItemCount() int {
 	return count
 }
 
+func (c *Cache) Size() int64 {
+	return c.size
+}
+
 func (c *Cache) DeletePrefix(prefix string) int {
 	count := 0
 	for _, b := range c.buckets {
